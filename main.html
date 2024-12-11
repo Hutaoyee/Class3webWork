@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJZP游戏商城</title>
+
+    <!-- CDN导入 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <style>
+
+        .top-nav {
+
+            background-color: #121216;
+            font-family: Impact, 微软雅黑;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+        }
+
+        .nav-link {
+
+        color: inherit; /* 继承父元素的颜色 */
+        text-decoration: none; /* 去除下划线 */
+        margin-top: 5px;
+        }
+
+
+        .game-img {
+            width: 194px; /* 设置宽度 */
+            height: 258px; /* 设置高度 */
+        }
+
+        .gamebox {
+
+            margin:10px
+        }
+
+        .nav-item-custom {
+        
+        font-family: 微软雅黑;
+        font-weight: bold;
+        font-size: 20px;
+        color: #878789;
+        }
+
+        .bg-color {
+
+            background-color: #101014;
+        }
+    </style>
+</head>
+
+<body class="bg-color text-white">
+    
+    <div class="container-fluid pt-2">
+
+        <ul class="nav top-nav">
+
+            <img src="./LOGO/DJZP.png" alt="Logo" style="width:40px;">
+
+
+            <li class="nav-item">
+
+              <a style="font-weight: lighter;" class="nav-link" href="#">STORE</a>
+            </li>
+
+            <li class="nav-item" style="margin-left: auto;">
+
+                <a class="nav-link" href="#">登入</a>
+              </li>
+
+          </ul>
+
+        <nav class="navbar navbar-expand-sm bg-color justify-content-center">
+            
+            <ul class="navbar-nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link nav-item-custom" href="#">商城</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-custom" href="#">库</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-item-custom" href="#">账户</a>
+            </li>
+            </ul>
+          </nav>
+
+        <div class="d-inline-flex p-3 text-white gamebox">
+            
+            <a href="#"><img class="game-img rounded" src="./Game Img/farming-simulator-25-vow90.avif" alt=""></a>
+        </div>
+        <div class="d-inline-flex p-3 text-white">
+
+            <a href="#"><img src="" alt=""></a>
+        </div>
+        <div class="d-inline-flex p-3 text-white">
+
+            <a href="#"><img src="" alt=""></a>
+          </div>
+
+    </div>
+</body>
+</html>
