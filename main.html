@@ -22,16 +22,56 @@
             padding-right: 10px;
             display: flex;
         }
-
+        
         .nav-link {
 
-        color: inherit; /* 继承父元素的颜色 */
-        text-decoration: none; /* 去除下划线 */
-        margin-top: 5px;
+            color: inherit; /* 继承父元素的颜色 */
+            text-decoration: none; /* 去除下划线 */
+            margin-top: 5px;
         }
 
+        .nav-item-custom {
+        
+            font-family: 微软雅黑;
+            font-weight: bold;
+            font-size: 20px;
+            color: #878789;
+        }
+
+        .bg-color {
+
+            background-color: #101014;
+        }
+
+        .freegame {
+
+            background-color: #121216;
+            font-weight: bold;
+            font-size: 20px;
+            width: 75%;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+
+        .freegame div a{
+
+            margin: 8px;
+            color: inherit; /* 继承父元素的颜色 */
+            text-decoration: none; /* 去除下划线 */
+            font-size: 16px;
+        }
+
+        .freegame img {
+
+            width: 336px;
+            height: 190px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
 
         .game-img {
+
             width: 194px; /* 设置宽度 */
             height: 258px; /* 设置高度 */
         }
@@ -41,28 +81,18 @@
             margin:10px
         }
 
-        .nav-item-custom {
-        
-        font-family: 微软雅黑;
-        font-weight: bold;
-        font-size: 20px;
-        color: #878789;
-        }
 
-        .bg-color {
-
-            background-color: #101014;
-        }
     </style>
 </head>
 
 <body class="bg-color text-white">
-    
+
     <div class="container-fluid pt-2">
 
+        <!-- 顶部导航栏 -->
         <ul class="nav top-nav">
 
-            <img src="./LOGO/DJZP.png" alt="Logo" style="width:40px;">
+            <img src="./Img/LOGO/DJZP.png" alt="" style="width:40px;">
 
 
             <li class="nav-item">
@@ -75,13 +105,14 @@
                 <a class="nav-link" href="#">登入</a>
               </li>
 
-          </ul>
+        </ul>
 
+        <!-- 移动导航栏 -->
         <nav class="navbar navbar-expand-sm bg-color justify-content-center">
             
             <ul class="navbar-nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link nav-item-custom" href="#">商城</a>
+                <a class="nav-link nav-item-custom" href="#">全部</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-item-custom" href="#">库</a>
@@ -90,11 +121,28 @@
                 <a class="nav-link nav-item-custom" href="#">账户</a>
             </li>
             </ul>
-          </nav>
+        </nav>
+        
+        <!-- 免费游戏 -->
+        <div class="d-flex p-3 freegame text-white flex-column">
+        
+            <div class="p-2">免费游戏</div>
 
+            <div class="d-flex">
+
+                <a class="d-flex flex-column" href="#"><img src="./Img/Game Img/Freegame/2077Ultimate.jpg" alt="">《赛博朋克 2077：终极版》</a>
+
+                <a class="d-flex flex-column" href="#"><img src="./Img/Game Img/Freegame/black-myth-wukong-wbmqz.avif" alt="">《黑神话：悟空》</a>
+                
+                <a class="d-flex flex-column" href="#"><img src="./Img/Game Img/Freegame/Red Dead Redemption 2.jpg" alt="">《Red Dead Redemption 2》</a>
+            </div>
+            
+        </div>
+
+        <!--  精选游戏 -->
         <div class="d-inline-flex p-3 text-white gamebox">
             
-            <a href="#"><img class="game-img rounded" src="./Game Img/farming-simulator-25-vow90.avif" alt=""></a>
+            <a href="#"><img class="game-img rounded" src="./Img/Game Img/farming-simulator-25-vow90.avif" alt=""></a>
         </div>
         <div class="d-inline-flex p-3 text-white">
 
@@ -103,7 +151,7 @@
         <div class="d-inline-flex p-3 text-white">
 
             <a href="#"><img src="" alt=""></a>
-          </div>
+        </div>
 
     </div>
 </body>
