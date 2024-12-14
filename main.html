@@ -5,89 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJZP游戏商城</title>
 
+    <!-- 网页图标 -->
+    <link rel="icon" href="./Img/LOGO/DJZP.png" type="image/png">
+
     <!-- CDN导入 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <style>
 
-        .top-nav {
-
-            background-color: #121216;
-            font-family: Impact, 微软雅黑;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 5px;
-            padding-left: 10px;
-            padding-right: 10px;
-            display: flex;
-        }
-        
-        .nav-link {
-
-            color: inherit; /* 继承父元素的颜色 */
-            text-decoration: none; /* 去除下划线 */
-            margin-top: 5px;
-        }
-
-        .nav-item-custom {
-        
-            font-family: 微软雅黑;
-            font-weight: bold;
-            font-size: 20px;
-            color: #878789;
-        }
-
-        .bg-color {
-
-            background-color: #101014;
-        }
-
-        .freegame {
-
-            background-color: #121216;
-            font-weight: bold;
-            font-size: 20px;
-            width: 75%;
-            margin: 0 auto;
-            margin-top: 5px;
-        }
-
-        .freegame div a{
-
-            margin: 8px;
-            color: inherit; /* 继承父元素的颜色 */
-            text-decoration: none; /* 去除下划线 */
-            font-size: 16px;
-        }
-
-        .freegame img {
-
-            width: 336px;
-            height: 190px;
-            border-radius: 8px;
-            margin-bottom: 5px;
-            margin-left: 5px;
-        }
-
-        .game-img {
-
-            width: 194px; /* 设置宽度 */
-            height: 258px; /* 设置高度 */
-        }
-
-        .gamebox {
-
-            margin:10px
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="./CSS/main.css">
 </head>
 
 <body class="bg-color text-white">
 
-    <div class="container-fluid pt-2">
+    <div class="container-fluid pt-2 ">
 
         <!-- 顶部导航栏 -->
         <ul class="nav top-nav">
@@ -97,62 +27,158 @@
 
             <li class="nav-item">
 
-              <a style="font-weight: lighter;" class="nav-link" href="#">STORE</a>
+              <a style="font-weight: lighter;" class="nav-link" href="./main.html">STORE</a>
             </li>
 
             <li class="nav-item" style="margin-left: auto;">
 
                 <a class="nav-link" href="#">登入</a>
               </li>
-
         </ul>
 
         <!-- 移动导航栏 -->
-        <nav class="navbar navbar-expand-sm bg-color justify-content-center">
+        <nav class="navbar d-flex bg-color navbar-expand-sm sticky-top">
             
-            <ul class="navbar-nav nav-pills">
+            <!-- 搜索框 -->
+            <form class="d-flex nav-search">
+
+                <input class="form-control me-2 form-control-sm rounded-pill" type="search" placeholder="" aria-label="Search">
+            </form>
+
+            <ul class="navbar-nav nav-pill">
+
             <li class="nav-item">
+
                 <a class="nav-link nav-item-custom" href="#">全部</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link nav-item-custom" href="#">库</a>
+
+                <a class="nav-link nav-item-custom" href="#">库存</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link nav-item-custom" href="#">账户</a>
+
+                <a class="nav-link nav-item-custom" href="#">社区</a>
             </li>
+            </ul>
+
+            <!-- 购物车按钮 -->
+            <ul class="navbar-nav nav-pill nav-buycar">
+
+                <!-- <li class="nav-item">
+
+                    <button class="btn btn-primary buycar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">购物车</button>
+                </li> -->
+
+                <li class="nav-item">
+
+                    <a class="btn btn-primary nav-link nav-item-custom abuycar" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">购物车</a>
+                </li>
             </ul>
         </nav>
         
+        <!-- 购物车 -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        
+            <div class="offcanvas-header">
+
+                <h5 id="offcanvasRightLabel">购物车</h5>
+                <button type="button" class="btn-close text-reset buycar-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                
+
+            </div>
+
+            <div class="bottom-pay">
+
+               <a href="">结算</a>
+            </div>
+        </div>
+
+        <!-- 游戏展示 -->
+        <div class="container showgame d-flex flex-wrap">
+
+            <div class="p-2 showfont">精选游戏</div>
+
+                <!-- 轮播 -->
+            <div id="moveho" class="carousel-fade carousel slide movepic shadow" data-bs-ride="carousel">
+                    
+                <!-- 轮播图片 -->
+                <div class="carousel-inner border border-dark rounded">
+
+                    <div class="carousel-item active">
+
+                        <a href="#">
+                            <img src="./Img/Game Img/Showgame/SRCX.jpg" class="d-block img-fluid">
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <a href="#">
+
+                            <img src="./Img/Game Img/Showgame/JH.jpg" class="d-block img-fluid">
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <a href="#">
+
+                            <img src="./Img/Game Img/Showgame/ARK.jpg" class="d-block img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-4 d-inline-flex flex-wrap align-content-center">
+
+                <a href="#"><img class="rounded-pill" src="./Img/Game Img/Showgame/2k25.jpg" alt=""></a>
+                <a href="#"><img class="rounded-pill" src="./Img/Game Img/Showgame/WS3.jpg" alt=""></a>
+                <a href="#"><img class="rounded-pill" src="./Img/Game Img/Showgame/HSPL.jpg" alt=""></a>
+                <a href="#"><img class="rounded-pill" src="./Img/Game Img/Showgame/ZD5.jpg" alt=""></a>
+            </div>
+        </div>
+
+        <!-- 折扣游戏 -->
+        <div class="container d-flex text-white flex-column discount">
+
+            <div class="p-2">限时折扣</div>
+
+            <div class="d-flex">
+
+                <a class="d-flex flex-column img-fluid" href="#"><img src="./Img/Game Img/Discount/Assassing’s-origins.jpg" alt="">《庄园领主》</a>
+
+                <a class="d-flex flex-column img-fluid" href="#"><img src="./Img/Game Img/Discount/Manor'lords.jpg" alt="">《刺客信条：起源》</a>
+                
+                <a class="d-flex flex-column img-fluid" href="#"><img src="./Img/Game Img/Discount/Party‘animals.jpg" alt="">《动物派对》</a>
+            </div>
+        </div>
+
+
         <!-- 免费游戏 -->
-        <div class="d-flex p-3 freegame text-white flex-column">
+        <div class="container d-flex freegame text-white flex-column">
         
             <div class="p-2">免费游戏</div>
 
             <div class="d-flex">
 
-                <a class="d-flex flex-column" href="#"><img src="./Img/Game Img/Freegame/2077Ultimate.jpg" alt="">《赛博朋克 2077：终极版》</a>
+                <a class="d-flex flex-column img-fluid" href="#"><img src="./Img/Game Img/Freegame/2077Ultimate.jpg" alt="">《赛博朋克 2077：终极版》</a>
 
-                <a class="d-flex flex-column" href="#"><img src="./Img/Game Img/Freegame/black-myth-wukong-wbmqz.avif" alt="">《黑神话：悟空》</a>
+                <a class="d-flex flex-column img-fluid" href="#"><img src="./Img/Game Img/Freegame/black-myth-wukong-wbmqz.avif" alt="">《黑神话：悟空》</a>
                 
-                <a class="d-flex flex-column" href="#"><img src="./Img/Game Img/Freegame/Red Dead Redemption 2.jpg" alt="">《Red Dead Redemption 2》</a>
+                <a class="d-flex flex-column img-fluid" href="#"><img src="./Img/Game Img/Freegame/Red Dead Redemption 2.png" alt="">《Red Dead Redemption 2》</a>
             </div>
             
         </div>
-
-        <!--  精选游戏 -->
-        <div class="d-inline-flex p-3 text-white gamebox">
-            
-            <a href="#"><img class="game-img rounded" src="./Img/Game Img/farming-simulator-25-vow90.avif" alt=""></a>
-        </div>
-        <div class="d-inline-flex p-3 text-white">
-
-            <a href="#"><img src="" alt=""></a>
-        </div>
-        <div class="d-inline-flex p-3 text-white">
-
-            <a href="#"><img src="" alt=""></a>
-        </div>
-
     </div>
+
+
+    <!-- 引入 Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
