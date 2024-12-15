@@ -1,0 +1,181 @@
+body {
+
+    background-color: #101014;
+}
+
+.bigbox {
+
+    display: flex;
+    flex-direction: column; /* 使子元素垂直排列 */
+    justify-content: flex-start; /* 使内容在容器顶部对齐 */
+    align-items: center; /* 使内容在容器水平居中 */
+    height: 60vh;
+    margin: 10%;
+    background-color: #121216;
+    border: #303033 1px solid;
+}
+
+.logo {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.logo a {
+
+    display: flex;
+}
+
+.logo img {
+
+    width: 60%;
+    margin: 0 auto;
+}
+
+.signin {
+
+    font-family: Impact, 微软雅黑;
+    font-weight: bold;
+    font-size: 120%;
+    color: #aeaeb0;
+    margin-top: 1%;
+}
+
+.signin_form {
+
+    font-family: Impact, 微软雅黑;
+    font-weight: bold;
+    font-size: 90%;
+    color: #aeaeb0;
+    margin-top: 1%;
+    width: 60%;
+}
+
+.form-group {
+
+    margin-bottom: 1%;
+}
+
+.form-control {
+
+    background-color: #121216;
+    border: #303033 1px solid;
+    padding: 1%; /* 增加内边距以增加输入框高度 */
+}
+
+.form-control:focus,
+.form-control:active {
+
+    background-color: #121216;
+    color: white;
+    border: white 1px solid;
+}
+
+/* 输入内容有效时 */
+.form-control:valid {
+
+    background-color: #1a1a1d;
+    color: white;
+}
+
+/* 取消自动填充底色 */
+input:-webkit-autofill { 
+
+    transition: background-color 9999999999s ease-in-out 0s; 
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,  
+input:-webkit-autofill:focus,   
+input:-webkit-autofill:active {
+
+    -webkit-text-fill-color: white; 
+    caret-color: rgb(255, 255, 255)
+}
+
+.btn {
+
+    margin: 2% auto;
+    background-color: rgb(228, 0, 127);
+    color: black;
+    border: #303033 1px solid;
+    width: 60%;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.btn:hover{
+
+    margin: 2% auto;
+    background-color: rgb(228, 0, 127);
+    border: #303033 1px solid;
+    color: black;
+    width: 60%;
+    font-weight: bold;
+}
+
+.btn:active {
+
+    background-color: rgb(228, 0, 127) !important;
+    color: black !important;
+}
+
+.btn-able {
+
+    margin: 2% auto;
+    background-color: rgb(228, 0, 127);
+    color: black;
+    border: #303033 1px solid;
+    width: 60%;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.btn-disabled {
+
+    background-color: #444448 !important;
+    color: #aeaeb0 !important;
+    border: none !important;
+}
+
+input.invalid {
+
+    border: 1px solid rgb(228, 0, 127);
+}
+
+.btn-enabled {
+    background-color: rgb(228, 0, 127); /* 可触发样式的背景颜色 */
+    color: black; /* 可触发样式的文本颜色 */
+    border: #303033 1px solid; /* 可触发样式的边框 */
+    cursor: pointer; /* 可触发样式的鼠标样式 */
+}
+
+.margint {
+
+    display: block;
+    margin-top: 2%;
+}
+
+.marginb {
+
+    margin-bottom: 5%;
+}
+
+.notuser {
+
+    color: #aeaeb0;
+    font-size: 90%;
+}
+
+p::before, p::after {
+    
+    content: "  ————————  "; /* 你想要添加的前缀内容 */
+    color: #aeaeb0;
+}
+
+.sign_up img{
+
+    width: 40%;
+    margin: 0 auto;
+}
