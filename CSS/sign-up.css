@@ -1,45 +1,48 @@
 body {
-
     background-color: #101014;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 20px 0; /* 添加上下内边距 */
+    height: 100vh;
+    overflow: hidden; /* 防止出现滚动条 */
+    overflow-y: auto; /* 允许垂直滚动 */
 }
 
 .bigbox {
-
     display: flex;
     flex-direction: column; /* 使子元素垂直排列 */
     justify-content: flex-start; /* 使内容在容器顶部对齐 */
     align-items: center; /* 使内容在容器水平居中 */
-    height: 80vh;
-    width: 55vh;
-    margin: 5%;
+    width: 90%;
+    max-width: 500px; /* 限制最大宽度 */
+    min-height: min-content; /* 最小高度适应内容 */
+    margin: auto; /* 居中对齐 */
+    padding: 20px;
     background-color: #121216;
     border: #303033 1px solid;
     border-radius: 15px; /* 添加圆角 */
+    box-sizing: border-box; /* 包括内边距和边框在内的总宽度和高度 */
+    overflow: hidden; /* 防止内容溢出 */
 }
 
 .logo {
-    
     display: flex;
     justify-content: center;
     margin-top: 2%;
 }
 
 .logo a {
-
     display: flex;
 }
 
 .logo img {
-
-    width: 45%;
+    width: 50%;
     margin: 0 auto;
 }
 
 .signup {
-
     font-family: Impact, 微软雅黑;
     font-weight: bold;
     font-size: 120%;
@@ -47,91 +50,125 @@ body {
     margin-top: 1%;
 }
 
-.form-group {
-
-    margin-bottom: 2%;
-}
-
 .signup_form {
-
     font-family: 微软雅黑;
     font-weight: bold;
     font-size: 90%;
     color: #aeaeb0;
     margin-top: 2%;
-    width: 60%;
+    width: 100%;
+    padding: 0 15px; /* 添加内边距 */
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 2%;
 }
 
 .form-control {
-
     background-color: #121216;
     border: #303033 1px solid;
     padding: 1%; /* 增加内边距以增加输入框高度 */
-    padding-left: 2%;
+    width: 100%; /* 设置输入框宽度为100% */
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .form-control:focus,
 .form-control:active {
-
     background-color: #121216;
     color: white;
     border: white 1px solid;
 }
 
-/* 取消自动填充底色 */
-input:-webkit-autofill { 
+/* 输入内容有效时 */
+.form-control:valid {
+    background-color: #1a1a1d;
+    color: white;
+}
 
-    transition: background-color 9999999999s ease-in-out 0s; 
+/* 取消自动填充底色 */
+input:-webkit-autofill {
+    transition: background-color 9999999999s ease-in-out 0s;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover,  
-input:-webkit-autofill:focus,   
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-
-    -webkit-text-fill-color: white; 
+    -webkit-text-fill-color: white;
     caret-color: rgb(255, 255, 255)
 }
 
 .btn,
 .btn:hover,
 .btn:focus {
-
-    margin: 2% auto;
+    margin: 20px 0;
     background-color: rgb(228, 0, 127);
     color: black;
     border: none;
-    width: 100%;
-    height: 6%;
+    width: 100%; /* 设置按钮宽度为100% */
+    height: auto; /* 自适应高度 */
+    padding: 10px; /* 使用padding代替固定高度 */
     font-weight: bold;
     font-size: 90%;
 }
 
 .btn:active {
-
     margin: 2% auto !important;
     background-color: rgb(228, 0, 127) !important;
     color: black !important;
     border: none !important;
-    width: 100% !important;
+    width: 100% !important; /* 设置按钮宽度为100% */
     height: 6% !important;
     font-weight: bold !important;
     font-size: 90% !important;
 }
 
 button:disabled {
-
     margin: 2% auto;
     background-color: #444448 !important;
     color: #aeaeb0;
     border: none;
-    width: 100%;
+    width: 100%; /* 设置按钮宽度为100% */
     height: 6%;
     font-weight: bold;
     font-size: 90%;
 }
 
 .form-control:valid {
-
     color: white;
+}
+
+/* 添加媒体查询 */
+@media screen and (max-width: 480px) {
+    .bigbox {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .logo img {
+        width: 70%;
+    }
+
+    .signup_form {
+        padding: 0 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+/* 处理较小高度的屏幕 */
+@media screen and (max-height: 700px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .bigbox {
+        margin: 10px auto;
+    }
 }

@@ -1,0 +1,272 @@
+body {
+
+    background-color: #101014;
+}
+
+.top-nav {
+
+    background-color: #121216;
+    font-family: Impact, 微软雅黑;
+    font-weight: bold;
+    font-size: 120%;
+    border-radius: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+}
+
+.top-nav a {
+
+    margin-top: 0%;
+}
+
+.top-nav a:hover,
+.top-nav a:active,
+.top-nav a:focus {
+
+    color: rgb(228, 0, 127);
+}
+
+.nav-link {
+
+    color: inherit; /* 继承父元素的颜色 */
+    text-decoration: none; /* 去除下划线 */
+    margin-top: 10%;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+
+    color: white;
+}
+
+.nav-search {
+
+    margin-left: 10%;
+}
+
+.nav-item {
+
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.nav-buycar {
+
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.nav-item button {
+
+    padding: 8px;
+    margin-top: 5.4375px;
+}
+
+.offcanvas-header {
+
+    background-color: #101014;
+}
+
+.offcanvas-header h5 {
+
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.buycar-close {
+
+    background-color: rgb(228, 0, 127);
+}
+
+.offcanvas-body {
+
+    background-color: #121216;
+}
+
+
+.bottom-pay {
+
+    position: fixed;
+    bottom: 1%; /* 距离底部20px */
+    right: 1%; /* 距离右侧20px */
+}
+
+.form-control {
+
+    background-color: RGB(32, 32, 36);
+    border: none;
+}
+
+/* 搜索框聚焦 */
+.nav-search input[type="search"]:focus {
+
+    background-color: RGB(32, 32, 36); /* 聚焦时的背景颜色保持不变 */
+    color: white;
+    box-shadow: none;
+}
+
+.nav-item-custom {
+
+    font-family: 微软雅黑;
+    font-weight: bold;
+    font-size: 120%;
+    color: #878789;
+}
+
+.buycar,
+.buycar:active{
+    background: none !important; /* 去除背景 */
+    border: none !important; /* 去除边框 */
+    color: #878789 !important; /* 设置文字颜色 */
+    font-size: 120% !important; /* 设置文字大小 */
+    font-weight: bold !important;
+    font-family: 微软雅黑 !important;
+    outline: none !important; /* 移除聚焦时的默认样式 */
+}
+
+.buycar:hover,
+.buycar:focus {
+
+    background: none !important; /* 去除背景 */
+    border: none !important; /* 去除边框 */
+    color: white !important; /* 设置文字颜色 */
+    font-size: 120% !important; /* 设置文字大小 */
+    font-weight: bold !important;
+    font-family: 微软雅黑 !important;
+    outline: none !important; /* 移除聚焦时的默认样式 */
+}
+
+.abuycar:hover,
+.abuycar:active,
+.abuycar:focus {
+
+    background: none !important; /* 去除背景 */
+    border: none !important; /* 去除边框 */
+}
+
+/* 游戏列表容器 */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    padding-right: 15px;
+    grid-template-rows: repeat(4, 1fr); /* 修改为4行 */
+    min-height: 1000px; /* 确保容器高度足够显示4行 */
+}
+
+/* 游戏卡片样式 */
+.game-card {
+    background-color: #121216;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 15px;
+}
+
+.game-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.game-price {
+    color: #e4007f;
+    font-weight: bold;
+}
+
+/* 过滤器样式 */
+.filter-section {
+    background-color: #121216;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.filter-title {
+    color: white;
+    margin-bottom: 10px;
+    font-family: 微软雅黑;
+    font-size: 1rem;
+}
+
+.form-check {
+    margin-bottom: 5px;
+}
+
+.form-check-label {
+    color: #878789;
+    font-family: 微软雅黑;
+    font-size: 0.9rem;
+}
+
+.form-check-input:checked {
+    background-color: #e4007f;
+    border-color: #e4007f;
+}
+
+/* 删除以下价格相关样式 */
+.price-range,
+.price-labels,
+.form-range::-webkit-slider-thumb {
+    display: none;
+}
+
+/* 分页导航样式 */
+.comments-pagination,
+.pagination {
+    margin-top: 20px;
+}
+
+.comments-pagination .page-link,
+.pagination .page-link {
+    background-color: #1f1f24;
+    border: none;
+    color: #878789;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.comments-pagination .page-link:hover,
+.pagination .page-link:hover {
+    background-color: #2a2a2f;
+    color: white;
+}
+
+.comments-pagination .page-info,
+.pagination .page-info {
+    color: #878789;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+.comments-pagination .disabled .page-link,
+.pagination .disabled .page-link {
+    background-color: #1f1f24;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pagination .active .page-link {
+    background-color: rgb(228, 0, 127);
+    color: white;
+}

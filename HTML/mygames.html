@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJZP游戏商城 | 库</title>
+
+    <!-- 网页图标 -->
+    <link rel="icon" href="../Img/LOGO/DJZP.png" type="image/png">
+
+    <!-- CDN导入 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../CSS/mygames.css">
+</head>
+<body class="text-white">
+    <div class="container-fluid pt-2">
+        <!-- 顶部导航栏 -->
+        <ul class="nav top-nav">
+            <img src="../Img/LOGO/DJZP.png" alt="" style="width:40px;">
+            <li class="nav-item">
+              <a style="font-weight: lighter;" class="nav-link" href="../HTML/main.html">STORE</a>
+            </li>
+            <li class="nav-item" style="margin-left: auto;">
+                <a class="nav-link" href="./sign-in.html">登入</a>
+            </li>
+        </ul>
+
+        <!-- 移动导航栏 -->
+        <nav class="navbar d-flex bg-color navbar-expand-sm sticky-top">
+            <!-- 搜索框 -->
+            <form class="d-flex nav-search">
+                <div class="search-container">
+                    <input class="form-control me-2 form-control-sm rounded-pill" 
+                           type="search" 
+                           placeholder="搜索游戏..." 
+                           list="search-results"
+                           id="search-input"
+                           autocomplete="off">
+                    <datalist id="search-results">
+                        <!-- 搜索结果将在这里动态添加 -->
+                    </datalist>
+                </div>
+            </form>
+
+            <ul class="navbar-nav nav-pill">
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="./allgame.html">全部</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom active" href="./mygames.html">库存</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="./community.html">社区</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 游戏列表区域 -->
+    <div class="container">
+        <div class="row mt-4">
+            <!-- 游戏列表 -->
+            <div class="col-md-9">
+                <div class="games-container">
+                    <!-- 游戏卡片由JS动态生成 -->
+                </div>
+                <!-- 分页控件 -->
+                <nav aria-label="游戏列表分页" class="mt-4">
+                    <ul class="pagination justify-content-center" id="pagination">
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- 过滤器侧边栏 -->
+            <div class="col-md-3">
+                <div class="filter-section">
+                    <!-- 添加搜索框 -->
+                    <div class="search-section mb-4">
+                        <h5 class="filter-title">搜索库中游戏</h5>
+                        <input type="text" class="form-control" id="gameSearchInput" placeholder="输入游戏名称">
+                    </div>
+                    
+                    <h5 class="filter-title">游戏类型</h5>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="action">
+                            <label class="form-check-label" for="action">动作</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rpg">
+                            <label class="form-check-label" for="rpg">角色扮演</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="strategy">
+                            <label class="form-check-label" for="strategy">策略</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/search.js"></script>
+    <script src="../JS/mygames.js"></script>
+</body>
+</html>

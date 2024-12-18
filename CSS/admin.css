@@ -1,0 +1,77 @@
+/* 限制容器最大宽度 */
+.container-fluid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 调整卡片样式 */
+.card {
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #343a40;
+    color: white;
+    padding: 8px 15px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* 调整标题大小 */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* 表单元素样式 */
+.form-control {
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+/* 标签样式 */
+label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.mb-3 {
+    margin-bottom: 12px !important;
+}
+
+/* 输入框样式 */
+input {
+    background-color: #495057 !important;
+    color: white !important;
+    border: 1px solid #6c757d !important;
+}
+
+input::placeholder {
+    color: #adb5bd !important;
+}
+
+/* 返回按钮样式 */
+.btn-outline-light {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+.btn-outline-light:hover {
+    background-color: #6c757d;
+}
