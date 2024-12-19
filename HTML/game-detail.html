@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJZP游戏商城 | </title>
+
+    <!-- 网页图标 -->
+    <link rel="icon" href="../Img/LOGO/DJZP.png" type="image/png">
+
+    <!-- CDN导入 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../CSS/game-detail.css">
+</head>
+<body class="text-white">
+    <div class="container-fluid pt-2">
+
+        <!-- 顶部导航栏 -->
+        <ul class="nav top-nav">
+
+            <img src="../Img/LOGO/DJZP.png" alt="" style="width:40px;">
+
+
+            <li class="nav-item">
+
+              <a style="font-weight: lighter;" class="nav-link" href="../HTML/main.html">STORE</a>
+            </li>
+
+            <li class="nav-item" style="margin-left: auto;">
+
+                <a class="nav-link" href="./sign-in.html">登入</a>
+              </li>
+        </ul>
+
+        <!-- 移动导航栏 -->
+        <nav class="navbar d-flex bg-color navbar-expand-sm sticky-top">
+            
+            <!-- 搜索框 -->
+            <form class="d-flex nav-search">
+
+                <input class="form-control me-2 form-control-sm rounded-pill" type="search" placeholder="" aria-label="Search">
+            </form>
+
+            <ul class="navbar-nav nav-pill">
+
+            <li class="nav-item">
+
+                <a class="nav-link nav-item-custom" href="./allgame.html">全部</a>
+            </li>
+
+            <li class="nav-item">
+
+                <a class="nav-link nav-item-custom" href="./mygames.html">库存</a>
+            </li>
+
+            <li class="nav-item">
+
+                <a class="nav-link nav-item-custom" href="./community.html">社区</a>
+            </li>
+            </ul>
+
+            <!-- 购物车按钮 -->
+            <ul class="navbar-nav nav-pill nav-buycar">
+
+                <!-- <li class="nav-item">
+
+                    <button class="btn btn-primary buycar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">购物车</button>
+                </li> -->
+
+                <li class="nav-item">
+
+                    <a class="btn btn-primary nav-link nav-item-custom abuycar" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">购物车</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- 购物车 -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        
+            <div class="offcanvas-header">
+
+                <h5 id="offcanvasRightLabel">购物车</h5>
+                <button type="button" class="btn-close text-reset buycar-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body text-white">
+                
+
+            </div>
+
+            <div class="bottom-pay">
+
+               <a href="">结算</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 游戏基本信息 -->
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <!-- 游戏封面轮播图 -->
+                <div id="gameCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../Img/Game Img/Showgame/2k25.jpg" class="d-block w-100" alt="游戏截图">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <h2 class="game-title" id="gameName">游戏名称</h2>
+                <p class="game-desc">游戏简短描述内容...</p>
+                <div class="game-price-section">
+                    <h3 class="price" id="gamePrice">￥299</h3>
+                    <button class="btn btn-primary w-100" id="addToCartBtn" 
+                            onclick="addToCart(document.getElementById('gameName').textContent, 
+                                    document.getElementById('gamePrice').textContent)">
+                        加入购物车
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏详细信息 -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="gameInfoTab" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description">游戏介绍</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#requirements">系统需求</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="description">
+                        <p>这里是详细的游戏介绍内容...</p>
+                    </div>
+                    <div class="tab-pane fade" id="requirements">
+                        <h4>最低配置要求：</h4>
+                        <ul>
+                            <li>操作系统：Windows 10 64位</li>
+                            <li>处理器：Intel Core i5</li>
+                            <li>内存：8 GB RAM</li>
+                            <li>显卡：NVIDIA GTX 1060</li>
+                            <li>存储空间：50 GB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../JS/search.js"></script>
+    <script src="../JS/cart.js"></script>
+</body>
+</html>

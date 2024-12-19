@@ -87,12 +87,26 @@ body {
     background-color: #121216;
 }
 
-
 .bottom-pay {
-
+    
     position: fixed;
-    bottom: 1%; /* 距离底部20px */
-    right: 1%; /* 距离右侧20px */
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(228, 0, 127);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.bottom-pay a {
+
+    color: white;
+    text-decoration: none !important;
 }
 
 .form-control {
@@ -143,7 +157,6 @@ body {
 .abuycar:hover,
 .abuycar:active,
 .abuycar:focus {
-
     background: none !important; /* 去除背景 */
     border: none !important; /* 去除边框 */
 }
